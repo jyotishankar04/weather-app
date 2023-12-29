@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2e2d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 400px;
+    padding: 20px;
+    border-radius:20px ;
+    background: linear-gradient(45deg,#059698,#7a0382);
+    position: relative;
+}
+
+.card .search{
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    width: 100%;   
+    gap: 10px;
+}
+
+.card .search input{
+    padding:10px 10px ;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.card .search button{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px ;
+    border-radius:20px;
+    outline: none;
+    border: none;
+    background-color: #059698;
+    color: aliceblue;
+    /* font-size: 10px; */
+    transition: all ease 0.5s;
+}
+
+.card .search button:hover{
+    color: #059698;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.card .WeatherContainer>h1{
+    margin-top: 30px;
+    /* width: 50%; */
+    margin-bottom: 40px;
+
+}
+
+
+.WeatherContainer{
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+
+
+.WeatherContainer .cols{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.WeatherContainer .col1, .WeatherContainer .col2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cols img{
+    width: 35px;
+}
+
+.cols h2{
+    font-size: 22px;
+}
+
+.cols p{
+    font-size: 13px;
+}
+
+.card::after{
+    transition: all ease 0.5s;
+    content: "Invalid City";
+    z-index: -1;
+    background: linear-gradient(#059698,#7a0382);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: aliceblue;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
